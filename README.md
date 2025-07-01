@@ -1,9 +1,12 @@
 # Example data for flashfmZero
  
 Here, we provide summary-level [INTERVAL
-study](https://doi.org/10.1186/1745-6215-15-363) data for fine-mapping associations with blood cell traits in the *SMIM1* region (1:3441528-3959487). This includes GWAS summary statistics files for 99 blood cell traits (([Astle et
+study](https://doi.org/10.1186/1745-6215-15-363) data for blood cell traits in the *SMIM1* region (1:3441528-3959487). This includes GWAS summary statistics files for 99 blood cell traits (([Astle et
 al. 2016](https://doi.org/10.1016/j.cell.2016.10.042), [Akbari et
-al. 2023](https://doi.org/10.1038/s41467-023-40679-y))), their trait covariance matrix, and the linkage disequilibrium (LD) matrix for this region (1:3441528-3959487).    
+al. 2023](https://doi.org/10.1038/s41467-023-40679-y))), their trait covariance matrix, and the linkage disequilibrium (LD) matrix for this region (1:3441528-3959487).
+
+Latent factor methods boost power to detect and fine-map signals for many traits and flashfmZero improves fine-mapping resolution by leveraging multiple latent factors.
+By using the tools in the [flashfmZero R package](https://jennasimit.github.io/flashfmZero/), latent factor GWAS summary statistics could be calculated from these files, followed by single and multi-trait fine-mapping.    
  
 [FlashfmZero](https://doi.org/10.1016/j.xgen.2025.100847) is a computationally efficient approach to **jointly
 fine-map signals in any number of uncorrelated quantitative traits**
@@ -17,9 +20,6 @@ each trait, credible sets, SNP marginal posterior probabilities of
 a causal association (MPP), and multi-SNP model posterior probabilities (PP) are
 output.
 
-We also provide an approach to **estimate latent factor GWAS summary
-statistics using only summary level data** - observed trait GWAS summary
-statistics, observed trait covariance matrix.
 
 For more details on flashfmZero, please see:
 
