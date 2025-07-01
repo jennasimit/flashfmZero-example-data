@@ -1,9 +1,9 @@
 # Example data for flashfmZero
  
 Here, we provide summary-level [INTERVAL
-study](https://doi.org/10.1186/1745-6215-15-363) data for fine-mapping associations with blood cell traits in the *SMIM1* region. This includes GWAS summary statistics files for 99 blood cell traits (([Astle et
+study](https://doi.org/10.1186/1745-6215-15-363) data for fine-mapping associations with blood cell traits in the *SMIM1* region (1:3441528-3959487). This includes GWAS summary statistics files for 99 blood cell traits (([Astle et
 al. 2016](https://doi.org/10.1016/j.cell.2016.10.042), [Akbari et
-al. 2023](https://doi.org/10.1038/s41467-023-40679-y))), their trait covariance matrix, and the linkage disequilibrium (LD) matrix for this region.    
+al. 2023](https://doi.org/10.1038/s41467-023-40679-y))), their trait covariance matrix, and the linkage disequilibrium (LD) matrix for this region (1:3441528-3959487).    
  
 [FlashfmZero](https://doi.org/10.1016/j.xgen.2025.100847) is a computationally efficient approach to **jointly
 fine-map signals in any number of uncorrelated quantitative traits**
