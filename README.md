@@ -1,4 +1,9 @@
 # Example data for flashfmZero
+
+<!-- badges: start -->
+
+[![DOI](https://zenodo.org/badge/1011933350.svg)](https://doi.org/10.5281/zenodo.15785324)
+<!-- badges: end -->
  
 Here, we provide summary-level [INTERVAL
 study](https://doi.org/10.1186/1745-6215-15-363) data for blood cell traits in the *SMIM1* region (1:3441528-3959487). This includes GWAS summary statistics files for 99 blood cell traits (([Astle et
