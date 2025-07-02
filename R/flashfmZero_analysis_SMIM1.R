@@ -97,4 +97,39 @@ if(length(fm_traits_latent)==1){
   names(FM_latent_CS$flashfm) <- fm_traits_latent
  }
 
+# summary table
+FMsummary_table(FM_latent, traitnames = fm_traits_latent, cred=0.95)
 
+
+# bubble plot of credible sets
+long_df_fm <- bind_rows(FM_latent_CS$fm, .id = "source")
+rownames(long_df_fm) <- NULL
+long_df_fm$Group <- groupIDs.fn(FM_latent$snpGroups[[1]], long_df_fm$SNP)
+
+long_df_flashfm <- bind_rows(FM_latent_CS$flashfm, .id = "source")
+rownames(long_df_flashfm) <- NULL
+long_df_flashfm$source <- paste0(long_df_flashfm$source,"*")
+long_df_flashfm$Group <- groupIDs.fn(FM_latent$snpGroups[[2]], long_df_flashfm$SNP)
+
+df <- rbind(long_df_fm,long_df_flashfm)
+ind <- which(nchar(df$Group)>1)
+df[ind,"Group"] <- "0"
+names(df)[1] <- "trait"
+
+df <- df %>%
+  group_by(SNP) %>%
+  mutate(maxMPP = max(MPP)) %>%
+  ungroup() %>%
+  mutate(SNP = reorder(SNP, maxMPP))
+
+
+ggplot(df, aes(x = trait, y = SNP, size = MPP, fill = Group)) +
+  geom_point(shape = 21, alpha = 0.8, color = "black") +
+  scale_size(range = c(1, 5), 
+  breaks = c(0.1, 0.3, 0.5, 0.7, 0.9), limits = c(0, 1), name = "MPP") + guides(size = guide_legend(
+ override.aes = list(shape = 21, fill = "black", color = "black", alpha = 1))) + theme_minimal(base_size = 12) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+	panel.grid.major = element_line(color = "gray90"),
+	panel.grid.minor = element_blank(),
+	plot.title = element_blank()) +
+  labs(x = "Latent factor", y = "Variant", fill = "Group")
