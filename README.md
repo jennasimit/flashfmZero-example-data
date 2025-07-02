@@ -11,7 +11,7 @@ al. 2016](https://doi.org/10.1016/j.cell.2016.10.042), [Akbari et
 al. 2023](https://doi.org/10.1038/s41467-023-40679-y))), their trait covariance matrix, and the linkage disequilibrium (LD) matrix for this region (1:3441528-3959487).
 
 Latent factor methods boost power to detect and fine-map signals for many traits and flashfmZero improves fine-mapping resolution by leveraging multiple latent factors.
-By using the tools in the [flashfmZero R package](https://jennasimit.github.io/flashfmZero/), latent factor GWAS summary statistics could be calculated from these files, followed by single and multi-trait fine-mapping.    
+By using the tools in the [flashfmZero R package](https://jennasimit.github.io/flashfmZero/), latent factor GWAS summary statistics could be calculated from these files, followed by single and multi-trait fine-mapping. We provide an R script that carries out these latent factor analyses.    
  
 [FlashfmZero](https://doi.org/10.1016/j.xgen.2025.100847) is a computationally efficient approach to **jointly
 fine-map signals in any number of uncorrelated quantitative traits**
